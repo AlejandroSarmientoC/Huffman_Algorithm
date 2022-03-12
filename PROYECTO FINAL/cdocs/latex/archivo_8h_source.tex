@@ -1,0 +1,50 @@
+\hypertarget{archivo_8h_source}{}\doxysection{archivo.\+h}
+\mbox{\hyperlink{archivo_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 ofstream \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keywordtype}{char} \mbox{\hyperlink{archivo_8h_aeaf846aa21a7d016a52f0b5b0c2f5544}{name}}[100];}
+\DoxyCodeLine{23 \textcolor{keywordtype}{char} *\mbox{\hyperlink{archivo_8h_a543ce0d7b42f492162d73ad4880d58c4}{pass}} = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[100];}
+\DoxyCodeLine{24 \textcolor{keywordtype}{char} \mbox{\hyperlink{archivo_8h_a6a25c9dd189923f332bbeccdb92cf371}{nameaux}}[100];}
+\DoxyCodeLine{25 \textcolor{keywordtype}{char} \mbox{\hyperlink{archivo_8h_a5f4ea2d487bb857a19ed73b31ca7621c}{passaux}}[100];}
+\DoxyCodeLine{26 \textcolor{keywordtype}{char} \mbox{\hyperlink{archivo_8h_adc7ce2b0b055ab38114ed2d6cdf547c8}{aux\_pass}}[100];}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{34 \textcolor{keywordtype}{void} \mbox{\hyperlink{archivo_8h_a8688be4caef7cc809832e9c58a42dd24}{insert}}(\textcolor{keywordtype}{char} *\mbox{\hyperlink{archivo_8h_aeaf846aa21a7d016a52f0b5b0c2f5544}{name}}, \textcolor{keywordtype}{char} *\mbox{\hyperlink{archivo_8h_a543ce0d7b42f492162d73ad4880d58c4}{pass}}) \{}
+\DoxyCodeLine{35     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.open(\textcolor{stringliteral}{"{}usuarios.txt"{}}, ios::app);}
+\DoxyCodeLine{36     \textcolor{comment}{//validate}}
+\DoxyCodeLine{37     \textcolor{keywordflow}{if} (\mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.fail()) \{}
+\DoxyCodeLine{38         cout << \textcolor{stringliteral}{"{}Error al abrir el archivo"{}} << endl;}
+\DoxyCodeLine{39         exit(1);}
+\DoxyCodeLine{40     \}}
+\DoxyCodeLine{41     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}} << \textcolor{stringliteral}{"{}\(\backslash\)nName: "{}} << \mbox{\hyperlink{archivo_8h_aeaf846aa21a7d016a52f0b5b0c2f5544}{name}} << \textcolor{stringliteral}{"{} "{}} << \textcolor{stringliteral}{"{}Password: "{}} << \mbox{\hyperlink{archivo_8h_a543ce0d7b42f492162d73ad4880d58c4}{pass}} << endl;}
+\DoxyCodeLine{42     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.close();}
+\DoxyCodeLine{43 \}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{53 \textcolor{keywordtype}{bool} \mbox{\hyperlink{archivo_8h_a5cb549e3882ed95e78500aa2a8675e71}{readfile}}(\textcolor{keywordtype}{char} *\mbox{\hyperlink{archivo_8h_aeaf846aa21a7d016a52f0b5b0c2f5544}{name}}, \textcolor{keywordtype}{char} *\mbox{\hyperlink{archivo_8h_a543ce0d7b42f492162d73ad4880d58c4}{pass}}) \{}
+\DoxyCodeLine{54     ifstream \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}};}
+\DoxyCodeLine{55     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.open(\textcolor{stringliteral}{"{}usuarios.txt"{}}, ios::in);}
+\DoxyCodeLine{56     \textcolor{keywordflow}{if} (\mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.fail()) \{}
+\DoxyCodeLine{57         cout << \textcolor{stringliteral}{"{}Error al abrir el archivo"{}} << endl;}
+\DoxyCodeLine{58         exit(1);}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60     \textcolor{keywordtype}{string} line;}
+\DoxyCodeLine{61     \textcolor{comment}{//comprobar si el usuario y la contrase{\ucr}a son correctos}}
+\DoxyCodeLine{62     \textcolor{keywordflow}{while} (getline(\mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}, line)) \{}
+\DoxyCodeLine{63         \textcolor{keywordflow}{if} (line.find(\mbox{\hyperlink{archivo_8h_aeaf846aa21a7d016a52f0b5b0c2f5544}{name}}) != string::npos \&\& line.find(\mbox{\hyperlink{archivo_8h_a543ce0d7b42f492162d73ad4880d58c4}{pass}}) != string::npos) \{}
+\DoxyCodeLine{64             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{65         \}}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.close();}
+\DoxyCodeLine{68     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{69 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,29 @@
+\hypertarget{_binary_file_helper_8h_source}{}\doxysection{Binary\+File\+Helper.\+h}
+\mbox{\hyperlink{_binary_file_helper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <iterator>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <exception>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_transform_utils_8h}{TransformUtils.h}}"{}}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{class }\mbox{\hyperlink{class_binary_file_helper}{BinaryFileHelper}}}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{33     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_binary_file_helper_a09b39cc0382b38cac8fff6b1a355010c}{write}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\&, \textcolor{keyword}{const} vector<unsigned char>\&);}
+\DoxyCodeLine{39     \textcolor{keyword}{static} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_binary_file_helper_a52bb2a7ff962fdac5a09c9fc25c6f340}{read}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\&, \textcolor{keyword}{const} \textcolor{keywordtype}{int} = 1000);}
+\DoxyCodeLine{46     \textcolor{keyword}{static} streampos \mbox{\hyperlink{class_binary_file_helper_aaddedc4a618bd0890791b3f461d04557}{get\_file\_size}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& filename);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{keyword}{private}:}
+\DoxyCodeLine{49     \mbox{\hyperlink{class_binary_file_helper}{BinaryFileHelper}}();}
+\DoxyCodeLine{50 \};}
+
+\end{DoxyCode}

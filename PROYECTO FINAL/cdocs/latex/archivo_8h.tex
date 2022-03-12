@@ -1,0 +1,130 @@
+\hypertarget{archivo_8h}{}\doxysection{archivo.\+h File Reference}
+\label{archivo_8h}\index{archivo.h@{archivo.h}}
+
+
+Archivo de cabecera para la clase Archivo.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{archivo_8h_a8688be4caef7cc809832e9c58a42dd24}{insert}} (char $\ast$\mbox{\hyperlink{archivo_8h_aeaf846aa21a7d016a52f0b5b0c2f5544}{name}}, char $\ast$\mbox{\hyperlink{archivo_8h_a543ce0d7b42f492162d73ad4880d58c4}{pass}})
+\begin{DoxyCompactList}\small\item\em El metodo \mbox{\hyperlink{archivo_8h_a8688be4caef7cc809832e9c58a42dd24}{insert()}} permite insertar un nuevo usuario en el archivo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{archivo_8h_a5cb549e3882ed95e78500aa2a8675e71}{readfile}} (char $\ast$\mbox{\hyperlink{archivo_8h_aeaf846aa21a7d016a52f0b5b0c2f5544}{name}}, char $\ast$\mbox{\hyperlink{archivo_8h_a543ce0d7b42f492162d73ad4880d58c4}{pass}})
+\begin{DoxyCompactList}\small\item\em El metodo \mbox{\hyperlink{archivo_8h_a5cb549e3882ed95e78500aa2a8675e71}{readfile()}} permite leer el archivo y validar si el usuario existe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ofstream \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}
+\item 
+char \mbox{\hyperlink{archivo_8h_aeaf846aa21a7d016a52f0b5b0c2f5544}{name}} \mbox{[}100\mbox{]}
+\item 
+char $\ast$ \mbox{\hyperlink{archivo_8h_a543ce0d7b42f492162d73ad4880d58c4}{pass}} = new char\mbox{[}100\mbox{]}
+\item 
+char \mbox{\hyperlink{archivo_8h_a6a25c9dd189923f332bbeccdb92cf371}{nameaux}} \mbox{[}100\mbox{]}
+\item 
+char \mbox{\hyperlink{archivo_8h_a5f4ea2d487bb857a19ed73b31ca7621c}{passaux}} \mbox{[}100\mbox{]}
+\item 
+char \mbox{\hyperlink{archivo_8h_adc7ce2b0b055ab38114ed2d6cdf547c8}{aux\+\_\+pass}} \mbox{[}100\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Archivo de cabecera para la clase Archivo. 
+
+\begin{DoxyAuthor}{Author}
+Sarmiento, Chicaiza 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/02-\/22
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{archivo_8h_a8688be4caef7cc809832e9c58a42dd24}\label{archivo_8h_a8688be4caef7cc809832e9c58a42dd24}} 
+\index{archivo.h@{archivo.h}!insert@{insert}}
+\index{insert@{insert}!archivo.h@{archivo.h}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void insert (\begin{DoxyParamCaption}\item[{char $\ast$}]{name,  }\item[{char $\ast$}]{pass }\end{DoxyParamCaption})}
+
+
+
+El metodo \mbox{\hyperlink{archivo_8h_a8688be4caef7cc809832e9c58a42dd24}{insert()}} permite insertar un nuevo usuario en el archivo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em pass} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{archivo_8h_a5cb549e3882ed95e78500aa2a8675e71}\label{archivo_8h_a5cb549e3882ed95e78500aa2a8675e71}} 
+\index{archivo.h@{archivo.h}!readfile@{readfile}}
+\index{readfile@{readfile}!archivo.h@{archivo.h}}
+\doxysubsubsection{\texorpdfstring{readfile()}{readfile()}}
+{\footnotesize\ttfamily bool readfile (\begin{DoxyParamCaption}\item[{char $\ast$}]{name,  }\item[{char $\ast$}]{pass }\end{DoxyParamCaption})}
+
+
+
+El metodo \mbox{\hyperlink{archivo_8h_a5cb549e3882ed95e78500aa2a8675e71}{readfile()}} permite leer el archivo y validar si el usuario existe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em pass} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}\label{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}} 
+\index{archivo.h@{archivo.h}!archivo@{archivo}}
+\index{archivo@{archivo}!archivo.h@{archivo.h}}
+\doxysubsubsection{\texorpdfstring{archivo}{archivo}}
+{\footnotesize\ttfamily ofstream archivo}
+
+\mbox{\Hypertarget{archivo_8h_adc7ce2b0b055ab38114ed2d6cdf547c8}\label{archivo_8h_adc7ce2b0b055ab38114ed2d6cdf547c8}} 
+\index{archivo.h@{archivo.h}!aux\_pass@{aux\_pass}}
+\index{aux\_pass@{aux\_pass}!archivo.h@{archivo.h}}
+\doxysubsubsection{\texorpdfstring{aux\_pass}{aux\_pass}}
+{\footnotesize\ttfamily char aux\+\_\+pass\mbox{[}100\mbox{]}}
+
+\mbox{\Hypertarget{archivo_8h_aeaf846aa21a7d016a52f0b5b0c2f5544}\label{archivo_8h_aeaf846aa21a7d016a52f0b5b0c2f5544}} 
+\index{archivo.h@{archivo.h}!name@{name}}
+\index{name@{name}!archivo.h@{archivo.h}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char name\mbox{[}100\mbox{]}}
+
+\mbox{\Hypertarget{archivo_8h_a6a25c9dd189923f332bbeccdb92cf371}\label{archivo_8h_a6a25c9dd189923f332bbeccdb92cf371}} 
+\index{archivo.h@{archivo.h}!nameaux@{nameaux}}
+\index{nameaux@{nameaux}!archivo.h@{archivo.h}}
+\doxysubsubsection{\texorpdfstring{nameaux}{nameaux}}
+{\footnotesize\ttfamily char nameaux\mbox{[}100\mbox{]}}
+
+\mbox{\Hypertarget{archivo_8h_a543ce0d7b42f492162d73ad4880d58c4}\label{archivo_8h_a543ce0d7b42f492162d73ad4880d58c4}} 
+\index{archivo.h@{archivo.h}!pass@{pass}}
+\index{pass@{pass}!archivo.h@{archivo.h}}
+\doxysubsubsection{\texorpdfstring{pass}{pass}}
+{\footnotesize\ttfamily char$\ast$ pass = new char\mbox{[}100\mbox{]}}
+
+\mbox{\Hypertarget{archivo_8h_a5f4ea2d487bb857a19ed73b31ca7621c}\label{archivo_8h_a5f4ea2d487bb857a19ed73b31ca7621c}} 
+\index{archivo.h@{archivo.h}!passaux@{passaux}}
+\index{passaux@{passaux}!archivo.h@{archivo.h}}
+\doxysubsubsection{\texorpdfstring{passaux}{passaux}}
+{\footnotesize\ttfamily char passaux\mbox{[}100\mbox{]}}
+

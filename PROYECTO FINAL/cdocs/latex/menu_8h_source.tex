@@ -1,0 +1,36 @@
+\hypertarget{menu_8h_source}{}\doxysection{menu.\+h}
+\mbox{\hyperlink{menu_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{menu__option_8h}{menu\_option.h}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <windows.h>}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define KEY\_UP 72}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define KEY\_DOWN 80}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define KEY\_LEFT 77}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define KEY\_RIGHT 75}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define KEY\_ENTER 13}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define KEY\_ESCAPE 27}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{class }\mbox{\hyperlink{class_menu}{Menu}} \{}
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_menu_ad466dd83355124a6ed958430450bfe94}{Menu}}();}
+\DoxyCodeLine{38     \mbox{\hyperlink{class_menu_ad466dd83355124a6ed958430450bfe94}{Menu}}(std::string title);}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_af00883540de9adcb6ad516e897c19cd2}{add\_option}}(\mbox{\hyperlink{class_menu_option}{MenuOption}} option);}
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a94a49db0eb130cb6a6c9d862fb59e281}{remove\_option}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a2e784e39d600214e778acbfcbfe04a1b}{display}}();}
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a14199ea81c4618e3cb599d58e0633db0}{stop}}();}
+\DoxyCodeLine{70     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_menu_a49b5360dca4d3f8de2e4728657b3dba3}{is\_running}}();}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{keyword}{private}:}
+\DoxyCodeLine{73     std::string title;}
+\DoxyCodeLine{74     std::vector<MenuOption> options;}
+\DoxyCodeLine{75     HANDLE console;}
+\DoxyCodeLine{76     \textcolor{keywordtype}{bool} running = \textcolor{keyword}{false};}
+\DoxyCodeLine{77 \};}
+
+\end{DoxyCode}

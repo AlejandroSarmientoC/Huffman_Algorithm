@@ -1,0 +1,142 @@
+ÁRBOL DE CAMINOS MÍNIMOS - ALGORITMO DE FLOYD WARSHALL
+------------------------------------------------------
+
+Tiempo de proceso = 0 segundos
+
+
+Matriz de Distancias mínimas:
+
+N1\N2	0	2	3	4	5	6	7	8	9	1	
+0	0	0	0	0	0	0	0	1E+18	1E+18	0	
+2	1E+18	0	0	0	0	0	1E+18	1E+18	1E+18	1E+18	
+3	1E+18	1E+18	0	0	0	0	1E+18	1E+18	1E+18	1E+18	
+4	1E+18	1E+18	1E+18	0	0	0	1E+18	1E+18	1E+18	1E+18	
+5	1E+18	1E+18	1E+18	1E+18	0	0	1E+18	1E+18	1E+18	1E+18	
+6	1E+18	1E+18	1E+18	1E+18	1E+18	0	1E+18	1E+18	1E+18	1E+18	
+7	1E+18	1E+18	1E+18	1E+18	1E+18	0	0	1E+18	1E+18	1E+18	
+8	1E+18	1E+18	1E+18	1E+18	1E+18	0	0	0	1E+18	1E+18	
+9	1E+18	1E+18	1E+18	1E+18	1E+18	0	0	0	0	1E+18	
+1	1E+18	0	0	0	0	0	0	1E+18	1E+18	0	
+
+Matriz de Caminos:
+
+N1\N2	0	2	3	4	5	6	7	8	9	1	
+0	-	1	2	3	4	5	1	-	-	0	
+2	-	-	2	3	4	5	-	-	-	-	
+3	-	-	-	3	4	5	-	-	-	-	
+4	-	-	-	-	4	5	-	-	-	-	
+5	-	-	-	-	-	5	-	-	-	-	
+6	-	-	-	-	-	-	-	-	-	-	
+7	-	-	-	-	-	7	-	-	-	-	
+8	-	-	-	-	-	7	8	-	-	-	
+9	-	-	-	-	-	7	8	9	-	-	
+1	-	1	2	3	4	5	1	-	-	-	
+
+Listado de Caminos:
+
+0 --(0)--> 0 = 
+0 --(0)--> 2 = 0, 1, 2
+0 --(0)--> 3 = 0, 1, 2, 3
+0 --(0)--> 4 = 0, 1, 2, 3, 4
+0 --(0)--> 5 = 0, 1, 2, 3, 4, 5
+0 --(0)--> 6 = 0, 1, 2, 3, 4, 5, 6
+0 --(0)--> 7 = 0, 1, 7
+0 --(1E+18)--> 8 = no existe camino
+0 --(1E+18)--> 9 = no existe camino
+0 --(0)--> 1 = 0, 1
+2 --(1E+18)--> 0 = no existe camino
+2 --(0)--> 2 = 
+2 --(0)--> 3 = 2, 3
+2 --(0)--> 4 = 2, 3, 4
+2 --(0)--> 5 = 2, 3, 4, 5
+2 --(0)--> 6 = 2, 3, 4, 5, 6
+2 --(1E+18)--> 7 = no existe camino
+2 --(1E+18)--> 8 = no existe camino
+2 --(1E+18)--> 9 = no existe camino
+2 --(1E+18)--> 1 = no existe camino
+3 --(1E+18)--> 0 = no existe camino
+3 --(1E+18)--> 2 = no existe camino
+3 --(0)--> 3 = 
+3 --(0)--> 4 = 3, 4
+3 --(0)--> 5 = 3, 4, 5
+3 --(0)--> 6 = 3, 4, 5, 6
+3 --(1E+18)--> 7 = no existe camino
+3 --(1E+18)--> 8 = no existe camino
+3 --(1E+18)--> 9 = no existe camino
+3 --(1E+18)--> 1 = no existe camino
+4 --(1E+18)--> 0 = no existe camino
+4 --(1E+18)--> 2 = no existe camino
+4 --(1E+18)--> 3 = no existe camino
+4 --(0)--> 4 = 
+4 --(0)--> 5 = 4, 5
+4 --(0)--> 6 = 4, 5, 6
+4 --(1E+18)--> 7 = no existe camino
+4 --(1E+18)--> 8 = no existe camino
+4 --(1E+18)--> 9 = no existe camino
+4 --(1E+18)--> 1 = no existe camino
+5 --(1E+18)--> 0 = no existe camino
+5 --(1E+18)--> 2 = no existe camino
+5 --(1E+18)--> 3 = no existe camino
+5 --(1E+18)--> 4 = no existe camino
+5 --(0)--> 5 = 
+5 --(0)--> 6 = 5, 6
+5 --(1E+18)--> 7 = no existe camino
+5 --(1E+18)--> 8 = no existe camino
+5 --(1E+18)--> 9 = no existe camino
+5 --(1E+18)--> 1 = no existe camino
+6 --(1E+18)--> 0 = no existe camino
+6 --(1E+18)--> 2 = no existe camino
+6 --(1E+18)--> 3 = no existe camino
+6 --(1E+18)--> 4 = no existe camino
+6 --(1E+18)--> 5 = no existe camino
+6 --(0)--> 6 = 
+6 --(1E+18)--> 7 = no existe camino
+6 --(1E+18)--> 8 = no existe camino
+6 --(1E+18)--> 9 = no existe camino
+6 --(1E+18)--> 1 = no existe camino
+7 --(1E+18)--> 0 = no existe camino
+7 --(1E+18)--> 2 = no existe camino
+7 --(1E+18)--> 3 = no existe camino
+7 --(1E+18)--> 4 = no existe camino
+7 --(1E+18)--> 5 = no existe camino
+7 --(0)--> 6 = 7, 6
+7 --(0)--> 7 = 
+7 --(1E+18)--> 8 = no existe camino
+7 --(1E+18)--> 9 = no existe camino
+7 --(1E+18)--> 1 = no existe camino
+8 --(1E+18)--> 0 = no existe camino
+8 --(1E+18)--> 2 = no existe camino
+8 --(1E+18)--> 3 = no existe camino
+8 --(1E+18)--> 4 = no existe camino
+8 --(1E+18)--> 5 = no existe camino
+8 --(0)--> 6 = 8, 7, 6
+8 --(0)--> 7 = 8, 7
+8 --(0)--> 8 = 
+8 --(1E+18)--> 9 = no existe camino
+8 --(1E+18)--> 1 = no existe camino
+9 --(1E+18)--> 0 = no existe camino
+9 --(1E+18)--> 2 = no existe camino
+9 --(1E+18)--> 3 = no existe camino
+9 --(1E+18)--> 4 = no existe camino
+9 --(1E+18)--> 5 = no existe camino
+9 --(0)--> 6 = 9, 8, 7, 6
+9 --(0)--> 7 = 9, 8, 7
+9 --(0)--> 8 = 9, 8
+9 --(0)--> 9 = 
+9 --(1E+18)--> 1 = no existe camino
+1 --(1E+18)--> 0 = no existe camino
+1 --(0)--> 2 = 1, 2
+1 --(0)--> 3 = 1, 2, 3
+1 --(0)--> 4 = 1, 2, 3, 4
+1 --(0)--> 5 = 1, 2, 3, 4, 5
+1 --(0)--> 6 = 1, 2, 3, 4, 5, 6
+1 --(0)--> 7 = 1, 7
+1 --(1E+18)--> 8 = no existe camino
+1 --(1E+18)--> 9 = no existe camino
+1 --(0)--> 1 = 
+
+Resuelto con:
+	Grafos - v.1.3.5
+	(cc) 2003..2012 - Alejandro Rodríguez Villalobos
+	http://arodrigu.webs.upv.es/grafos
+

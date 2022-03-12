@@ -1,0 +1,35 @@
+\hypertarget{_node_8h_source}{}\doxysection{Node.\+h}
+\mbox{\hyperlink{_node_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{using} std::shared\_ptr;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_node}{Node}}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_node_a41d0c347628f9faa4fee6d6c8d8993c4}{Node}}(\textcolor{keyword}{const} T);}
+\DoxyCodeLine{36     \mbox{\hyperlink{class_node_a41d0c347628f9faa4fee6d6c8d8993c4}{Node}}(\textcolor{keyword}{const} T, \textcolor{keyword}{const} \textcolor{keywordtype}{int});}
+\DoxyCodeLine{45     \mbox{\hyperlink{class_node_a41d0c347628f9faa4fee6d6c8d8993c4}{Node}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int});}
+\DoxyCodeLine{54     \mbox{\hyperlink{class_node_a41d0c347628f9faa4fee6d6c8d8993c4}{Node}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int}, \textcolor{keyword}{const} shared\_ptr<Node>\&, \textcolor{keyword}{const} shared\_ptr<Node>\&);}
+\DoxyCodeLine{60     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_node_a6e72393673e54cebfec26600a5e21058}{get\_count}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{66     T \mbox{\hyperlink{class_node_a7735d8c715881f428ff51d85e5700119}{get\_value}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{72     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_node_a269234d812a08edf67458f679ca55509}{has\_left}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{78     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_node_ac0935e1ade35f3d6d83d5365af53f7fc}{has\_right}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{79     \textcolor{keyword}{const} shared\_ptr<Node<T>>\& \mbox{\hyperlink{class_node_a2e6de1bdbcc4e2c9e76421d618123e51}{get\_left}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{80     \textcolor{keyword}{const} shared\_ptr<Node<T>>\& \mbox{\hyperlink{class_node_af451ff1c89ca184ef4cfd322d7b32b5c}{get\_right}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{81     \mbox{\hyperlink{class_node}{Node}}\& \mbox{\hyperlink{class_node_ab6349450bd0e7e0bf2973e72d0d84d40}{operator ++ }}();}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \textcolor{keyword}{private}:}
+\DoxyCodeLine{84     shared\_ptr<Node<T>> left;}
+\DoxyCodeLine{85     shared\_ptr<Node<T>> right;}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87     \textcolor{keywordtype}{int} count;}
+\DoxyCodeLine{88     T value;}
+\DoxyCodeLine{89 \};}
+
+\end{DoxyCode}

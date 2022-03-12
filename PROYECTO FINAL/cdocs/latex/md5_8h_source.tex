@@ -1,0 +1,48 @@
+\hypertarget{md5_8h_source}{}\doxysection{md5.\+h}
+\mbox{\hyperlink{md5_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{login_8h}{login.h}}"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{archivo_8h}{archivo.h}}"{}}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{34  \textcolor{comment}{//HASH FUCTION}}
+\DoxyCodeLine{35 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{md5_8h_aae92b570488fd1723434825fe03d7166}{SHF}}(\textcolor{keywordtype}{string} input) \{ \textcolor{comment}{//SHF = hash fuction}}
+\DoxyCodeLine{36     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} Init = 124564352;}
+\DoxyCodeLine{37     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} Magic = 5674356;}
+\DoxyCodeLine{38     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} Hash;}
+\DoxyCodeLine{39     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < input.length(); i++) \{}
+\DoxyCodeLine{40         Hash = Hash \string^ (input[i]); \textcolor{comment}{//XOR each byte of input}}
+\DoxyCodeLine{41         Hash = Hash * Magic; \textcolor{comment}{//Multiply by the magic number}}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} Hash;}
+\DoxyCodeLine{44 \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{53 \textcolor{keywordtype}{string} \mbox{\hyperlink{md5_8h_a5feb51177fea7a8bd2302fffd98c5f40}{ToHex}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} input) \{}
+\DoxyCodeLine{54     \textcolor{keywordtype}{string} HexHash;}
+\DoxyCodeLine{55     stringstream hexstream;}
+\DoxyCodeLine{56     hexstream << hex << input;}
+\DoxyCodeLine{57     HexHash = hexstream.str();}
+\DoxyCodeLine{58     std::transform(HexHash.begin(), HexHash.end(), HexHash.begin(), ::toupper);}
+\DoxyCodeLine{59     \textcolor{keywordflow}{return} HexHash;}
+\DoxyCodeLine{60 \}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{66 \textcolor{keywordtype}{void} \mbox{\hyperlink{md5_8h_ae5b4989b305a05ec8d8d93f920d3ee31}{toString}}() \{}
+\DoxyCodeLine{67     system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{68     system(\textcolor{stringliteral}{"{}COLOR 7"{}});}
+\DoxyCodeLine{69     cout << \textcolor{stringliteral}{"{}Your username is: "{}} << \mbox{\hyperlink{archivo_8h_aeaf846aa21a7d016a52f0b5b0c2f5544}{name}} << endl;}
+\DoxyCodeLine{70     cout << \textcolor{stringliteral}{"{}Your password is: "{}} << \mbox{\hyperlink{archivo_8h_a543ce0d7b42f492162d73ad4880d58c4}{pass}} << endl;}
+\DoxyCodeLine{71     cout << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)nYour username crypted is: "{}} << \mbox{\hyperlink{md5_8h_a5feb51177fea7a8bd2302fffd98c5f40}{ToHex}}(\mbox{\hyperlink{md5_8h_aae92b570488fd1723434825fe03d7166}{SHF}}(\mbox{\hyperlink{archivo_8h_aeaf846aa21a7d016a52f0b5b0c2f5544}{name}})) << endl;}
+\DoxyCodeLine{72     cout << \textcolor{stringliteral}{"{}Your password crypted is: "{}} << \mbox{\hyperlink{md5_8h_a5feb51177fea7a8bd2302fffd98c5f40}{ToHex}}(\mbox{\hyperlink{md5_8h_aae92b570488fd1723434825fe03d7166}{SHF}}(\mbox{\hyperlink{archivo_8h_a543ce0d7b42f492162d73ad4880d58c4}{pass}})) << endl;}
+\DoxyCodeLine{73 \}}
+
+\end{DoxyCode}

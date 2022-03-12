@@ -1,0 +1,26 @@
+\hypertarget{utils_8h_source}{}\doxysection{utils.\+h}
+\mbox{\hyperlink{utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <windows.h>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{utils_8h_a4953d1edcbbfc7e420c423ded1d5621a}{clear\_screen}}() \{}
+\DoxyCodeLine{18     COORD topLeft = \{ 0, 0 \};}
+\DoxyCodeLine{19     HANDLE console = GetStdHandle(STD\_OUTPUT\_HANDLE);}
+\DoxyCodeLine{20     CONSOLE\_SCREEN\_BUFFER\_INFO screen;}
+\DoxyCodeLine{21     DWORD written;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     GetConsoleScreenBufferInfo(console, \&screen);}
+\DoxyCodeLine{24     FillConsoleOutputCharacterA(}
+\DoxyCodeLine{25         console, \textcolor{charliteral}{' '}, screen.dwSize.X * screen.dwSize.Y, topLeft, \&written}
+\DoxyCodeLine{26     );}
+\DoxyCodeLine{27     FillConsoleOutputAttribute(}
+\DoxyCodeLine{28         console, FOREGROUND\_GREEN | FOREGROUND\_RED | FOREGROUND\_BLUE,}
+\DoxyCodeLine{29         screen.dwSize.X * screen.dwSize.Y, topLeft, \&written}
+\DoxyCodeLine{30     );}
+\DoxyCodeLine{31     SetConsoleCursorPosition(console, topLeft);}
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}
